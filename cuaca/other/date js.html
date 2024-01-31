@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's Day and Date</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #datetime {
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div id="datetime"></div>
+
+    <script>
+        function getTodayDateTime() {
+            // Mendapatkan tanggal saat ini
+            const today = new Date();
+
+            // Array dengan nama hari
+            const daysOfWeek = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+
+            // Mendapatkan indeks hari (0 untuk Minggu, 1 untuk Senin, ..., 6 untuk Sabtu)
+            const dayIndex = today.getDay();
+
+            // Mendapatkan nama hari menggunakan indeks
+            const dayName = daysOfWeek[dayIndex];
+
+            // Mendapatkan tanggal, bulan, dan tahun
+            const date = today.getDate();
+            const month = today.toLocaleDateString('id-ID', { month: 'long' });
+            const year = today.getFullYear();
+
+            // Menampilkan informasi hari dan tanggal di elemen dengan id "datetime"
+            document.getElementById('datetime').textContent = `Hari ini: ${dayName}, ${date} ${month} ${year}`;
+        }
+
+        // Memanggil fungsi untuk menampilkan informasi hari dan tanggal saat halaman dimuat
+        getTodayDateTime();
+    </script>
+</body>
+</html>

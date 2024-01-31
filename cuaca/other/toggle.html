@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Pagi & Malam</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        .navbar {
+            background-color: #f8f8f8;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar button {
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 16px;
+        }
+
+        #content {
+            padding: 20px;
+        }
+
+        /* Tema Pagi */
+        .theme-light {
+            background-color: #fff;
+            color: #333;
+        }
+
+        /* Tema Malam */
+        .theme-dark {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="theme-light">
+    <div class="navbar">
+        <span>Website Pagi & Malam</span>
+        <button onclick="toggleTheme()">Ganti Tema</button>
+    </div>
+    <div id="content">
+        <h1>Selamat Pagi!</h1>
+        <p>Ini adalah halaman web yang sederhana dengan pilihan tema pagi dan malam.</p>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+
+            // Toggle antara tema pagi dan malam
+            body.classList.toggle('theme-light');
+            body.classList.toggle('theme-dark');
+        }
+    </script>
+</body>
+</html>
+

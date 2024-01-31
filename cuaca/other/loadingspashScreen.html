@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Loading Splash Screen</title>
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loading-spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#main-content {
+    display: none; /* Hide main content initially */
+}
+
+    </style>
+</head>
+<body>
+    <div id="splash-screen">
+        <div class="loading-spinner"></div>
+        <p>Loading...</p>
+    </div>
+    
+    <!-- Your main content goes here -->
+    <div id="main-content">
+        <!-- Your content -->
+    </div>
+
+    <script >
+        document.addEventListener("DOMContentLoaded", function () {
+    // Simulate a delay (you can replace this with actual loading logic)
+    setTimeout(function () {
+        // Hide the splash screen
+        document.getElementById("splash-screen").style.display = "none";
+
+        // Show the main content
+        document.getElementById("main-content").style.display = "block";
+    }, 3000); // Adjust the time as needed
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>London Time</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #clock {
+            font-size: 3em;
+        }
+    </style>
+</head>
+<body>
+    <div id="clock"></div>
+
+    <script>
+        function updateClock() {
+            // Mendapatkan waktu saat ini di London
+            const londonTime = new Date().toLocaleString('en-US', { timeZone: 'Europe/London' });
+
+            // Mendapatkan jam dan menampilkan hanya angka
+            const hours = new Date(londonTime).getHours();
+            const minutes = new Date(londonTime).getMinutes();
+            const seconds = new Date(londonTime).getSeconds();
+
+            // Format waktu
+            const formattedTime = `${hours}:${minutes}:${seconds}`;
+
+            // Menampilkan waktu di elemen dengan id "clock"
+            document.getElementById('clock').textContent = formattedTime;
+        }
+
+        // Memperbarui waktu setiap detik
+        setInterval(updateClock, 1000);
+
+        // Memanggil fungsi pertama kali untuk menampilkan waktu awal
+        updateClock();
+    </script>
+</body>
+</html>

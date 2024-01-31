@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logowebsite.png">
+    <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css"  href="navbarStyle.css">
+    <link rel="stylesheet" type="text/css"  href="contentStyle.css">
+    <title>Weather's</title>
+
+</head>
+
+<body>
+    <div id="splash-screen">
+        <div class="loading-spinner"></div>
+    </div>
+
+        <div class="nav-area">
+            
+            <div class="nav-mode" id="navMode">
+                <div class="toggle-area" id="toggleArea">
+                    <div class="malam" id="darkMode" onclick="darkModeFun()">
+                        <img src="img/icon dark-n.png" id="malamIC" alt=" icon night off" width="30px">
+                    </div>
+                    <div class="pagi" id="LightMode" onclick="lightModeFun()" > 
+                        <img src="img/icon light-f.png"  id="pagiIC" alt=" icon morning off" width="30px">
+                    </div>
+                </div>
+                <div class="arrow-area">
+                    <div class="icon" >
+                        <div class="theIcon" id="theIcon">
+                            <img  src="img/theimgICon.png" id="navIC">
+                        </div>
+                        
+                    </div>
+                    <div class="arrow"  id="arrow" onclick=" slideNav()" >
+                        <img src="img/icon arrow fix.png" id="arrowIC" alt="icon arrow " width="30px" >
+                    </div>
+                </div>
+            </div>
+            <div class="nav-city" id="nav">
+                <div class="areatext" id="areatext">
+                     
+                </div>
+            </div>
+        </div>
+
+        <div class="titleName-area">
+
+        </div>
+ 
+
+    <div class="container" style="overflow:scroll">
+        <div class="scroll">
+            <div class="space"></div>
+
+
+
+        <div class="clock-area" id="clock-area">
+            <p id="clock" class="p-clock"></p>
+            <!-- <p id="hr" class="p-clock" >10</p>
+                <p class="p-clock" >:</p>
+                <p id="mn" class="p-clock" >00</p>
+                <p class="p-clock" >:</p>
+                <p id="sc" class="p-clock" >00</p> -->
+        </div>
+        <div class="cuaca-area-x">
+            <div class="box-date" id="boxDate">
+                <div class="date" id="dateArea">
+                    <p id="date"></p>
+                </div>
+                <div class="title-date" id="title-date">
+                    <p id="moon"></p>
+                </div>
+            </div>
+            <div class="box-whater" id="boxWeather">
+
+                <div class="weather-title-now">
+                    <p>Now</p>
+                </div>
+                <div class="img-weather-now" >
+                    <img src="img/img now.png" id="weatherIC">
+                </div>
+                <!-- <div class="weather-c-now" id="weather-c-now"><p id="C-">26</p> <p id="˚">˚</p></div>   -->
+            </div>
+
+        </div>
+        <div class="content-area"> 
+            <div class="content" id="content">
+                <div class="content-text">
+                    <div class="text-temp">
+                        <h3>Interval</h3>
+                        <p> measurement with a numerical scale in which adjacent values are equally spaced and measured
+                            along the scale </p>
+                        <div class="box" id="box">
+                            <!-- <p id="temp">-5,6</p> -->
+                        </div>
+                    </div>
+                    <div class="text-cloud" id="textcloud">
+                        <h3>relative humidity</h3>
+                        <p>Relative humidity (RH) 2m is a data logger and sensor that can measure air humidity and
+                            temperature. This sensor has a temperature measurement range of -40°C to 75°C and humidity
+                            of 0-100%</p>
+                        <div class="box" id="boxs">
+                            <!-- <p id="cloud">38</p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="content-maps" id="maps">
+                    <canvas data-v-c09670fc="" id="chart-component" width="4600" height="640"
+                        style="display: block; height: 320px; width: 2300px;" class="chartjs-render-monitor"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="space"></div>
+        <div class="space"></div>
+        <div class="space"></div>
+        <div class="space"></div>
+        
+        <div class="bigmaps-area">
+           
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.58518424956!2d-0.26640261620654726!3d51.52852620451358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20Britania%20Raya!5e0!3m2!1sid!2sid!4v1702001693607!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="information-area">
+                <div class="informationOne">
+                    <div class="where-Information">
+                        <div class="title-Where-Information">
+                            <h3>📍Where?</h3>
+                        </div>
+                        <div class="material-Where-Information">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum inventore eos voluptatem quam sint cum alias neque libero ut id.</p>
+                            <img src="img/london img.png" width="180px">
+                        </div>
+                    </div>
+                <div class="population-Information">
+                    <div class="title-population-Information">
+                    <h3> 👥 Population London Total last</h3>
+                    </div>
+                    <div class="material-population-Information">
+                        <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, consequuntur.</p> -->
+                        <div class="text-blankPopular"></div>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+       
+        </div>
+        <div class="space"></div>
+
+    </div>
+   
+   
+    <script src="navbarJS.js"></script>
+    <script src="contentJS.js"></script>
+
+
+</body>
+
+</html>
